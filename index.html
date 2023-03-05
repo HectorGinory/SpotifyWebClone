@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Clone Web</title>
+    <link rel="stylesheet" type="text/css" href="styles/index.css" />
+</head>
+<body>
+    <div class="body-container menu-open" id="body">
+        <nav class="menuAside" id="menuAside">
+            <h4>
+                <img src="sources/svg/spotify-icon.svg" alt="spotify icon">
+                Spotify
+            </h4>
+            <a class="section" href=""><img src="./sources/svg/home.svg" alt="home icon"> Inicio</a>
+            <a class="section" href=""><img src="./sources/svg/search.svg" alt="search icon"> Buscar</a>
+            <a class="section" href=""><img src="./sources/svg/library.svg" alt="library icon"> Tu biblioteca</a>
+            <button class="create-list"><img src="./sources/svg/plus.svg" alt="plus icon">Crear lista</button>
+            <button class="liked-song"><img src="./sources/svg/heart.svg" alt="heart icon">Canciones que te gustan</button>
+        </nav>
+        <div class="main" id="main">
+            <div class="menu">
+                <button onclick="openMenu()" class="menu-btn">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </button>
+                <div class="login-container">
+                    <button class="register-btn">Registrarte</button>
+                    <button class="login-btn">Iniciar sesión</button>
+                </div>
+            </div>
+            <dic class="main">
+                <button>
+                    <div class="line-menu"></div>
+                    <div class="line-menu"></div>
+                    <div class="line-menu"></div>
+                </button>
+            </dic>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="text">
+            <p>Redesign of Spotify</p>
+            <p>Check the original page to see the difference with the original</p>
+        </div>
+        <a href="">
+            <button>Original Spotify</button>
+        </a>
+    </footer>
+    <script src="./js/index.js"></script>
+</body>
+</html>

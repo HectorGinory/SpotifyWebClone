@@ -1,0 +1,207 @@
+/* Import font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300&display=swap');
+/* font-family: 'Roboto', sans-serif;+ */
+
+/* Variables */
+
+:root {
+    --g-1: #1DB954;
+    --g-2: #10963f;
+    --g-3: #39d56f;
+}
+/* General Styles */
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif;
+    background: transparent;
+    border: 0px solid transparent;
+    color: white;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: rgb(12, 13, 12);
+    overflow: hidden;
+}
+
+footer {
+    width: calc(100vw - 40px);
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0px;
+    background: linear-gradient(to right, var(--g-2), var(--g-1), var(--g-3));
+    box-shadow: 0px 0px 10px var(--g-3);
+}
+
+footer p:nth-child(2) {
+    font-weight: 300;
+}
+
+footer button {
+    width: 120px;
+    height: 40px;
+    border:1px solid var(--g-1);
+    color: var(--g-1);
+    border-radius: 30px;
+    transition: .4s;
+    background: white;
+}
+
+footer button:hover {
+    box-shadow: 0px 0px 10px var(--g-2);
+}
+
+.body-container {
+    display: flex;
+    min-width: 100vw;
+    transition: 1s;
+}
+
+.menuAside {
+    width: 20%;
+    height: calc(100vh - 60px);
+    box-shadow: 0px 0px 3px rgba(255, 255, 255, 0.04) inset;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: 1s;
+    background: black;
+    overflow: hidden;
+}
+
+.menuAside h4 {
+    margin: 30px 0px 20px 30px;
+    font-size: 30px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.menuAside h4 img {
+    height: 70%;
+}
+
+.menuAside a {
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+}
+
+.menuAside a img{
+    color: white;
+    height: 30px;
+}
+
+.menuAside button {
+    background: transparent;
+    border: 0px solid transparent;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    padding: 5px 30px;
+    gap: 15px;
+}
+
+.menuAside .create-list {
+    margin-top: 40px;
+}
+
+.menuAside button img{
+    color: white;
+    height: 30px;
+}
+
+.main {
+    transition: 1s;
+    background: linear-gradient(to top, rgba(0, 2, 16, 0.17), rgb(0, 0, 0));
+}
+
+.main .menu {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    background: rgba(0, 1, 0, 0.389);
+}
+.menu-open .main .menu {
+    width: 100vw;
+}
+.menu-closed .main .menu {
+    width: 100vw;
+}
+
+.main .menu-btn {
+    border: 0px solid transparent;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    transition: .7s;
+    transition-delay: .3s;
+    margin-left: 20px;
+}
+
+.main .menu-btn .line {
+    width: 80%;
+    height: 3px;
+    background: white;
+    transition: 1s;
+}
+.menu-open .menu-btn {
+    transform: translateX(-80px);
+    transition: .7s;
+}
+.menu-closed .menu-btn {
+    transform: translateX(0px);
+    transition: .7s;
+}
+.menu-open .menu-btn .line {
+    width: 50%;
+    height: 2px;
+    
+}
+.menu-open .menu-btn .line:nth-child(1) {
+    transform: rotate(45deg) translateY(18px);
+}
+.menu-open .menu-btn .line:nth-child(2) {
+    height: 0px;
+    opacity: 0;
+}
+.menu-open .menu-btn .line:nth-child(3) {
+    transform: rotate(-45deg) translateY(-18px);
+}
+
+.menu-closed .menuAside{
+    opacity: 0;
+    transform: translateX(-100%);
+    transition-delay: .7s;
+}
+
+.menu-open .menuAside{
+    transform: translateX(0%);
+    transition: 1s;
+    opacity: 1;
+}
+
+.menu-closed .main {
+    width: 100%;
+    transform: translateX(0%);
+}
+
+.menu-open .main {
+    width: 80%;
+    transition-delay: .5s ;
+}
